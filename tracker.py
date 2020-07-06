@@ -39,9 +39,8 @@ def start_graph():
     ax.set_xlabel("Day")
     ax.set_ylabel("Time in Hours")
     ax.get_legend().remove()
-
-def refresh_graph():
-    return start_graph()
+    #btn_refresh.bind('<Button-1>')
+    #sunken = btn_refresh.config(relief="sunken")
 
 def start_timer():
     begin = datetime.datetime.now()
@@ -71,9 +70,9 @@ btn_start.pack(in_=bottom, side=LEFT, pady=20, padx=10)
 btn_end = Button(window, text="End", fg="black", font=("Segoe UI", 20), command=end_timer, activebackground="grey",
                  width=15)
 btn_end.pack(in_=bottom, side=LEFT, pady=20, padx=10)
-btn_refresh = Button(window, text="Refresh graph", fg="black", font=("Segoe UI", 20), command=refresh_graph, activebackground="grey",
-                 width=15)
-btn_refresh.pack(in_=bottom, side=LEFT, pady=20, padx=10)
+#btn_refresh = Button(window, text="Refresh graph", fg="black", font=("Segoe UI", 20), command=start_graph, activebackground="grey",
+#                 width=15)
+#btn_refresh.pack(in_=bottom, side=LEFT, pady=20, padx=10)
 
 #initializing app
 start_graph()
